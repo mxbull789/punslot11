@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #0a0a0a;
+    background-image: url('img/background.jpg'); /* เพิ่มภาพพื้นหลังที่นี่ */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 850px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.8); /* เพิ่มพื้นหลังโปร่งแสงเพื่อความอ่านง่าย */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+    width: 150px;
+    margin-top: 20px;
+}
+
+.header h2 {
+    font-size: 23px;
+    margin: 20px 0;
+    font-weight: 700;
+    color: #ffd700; /* ใช้สีที่ดูอ่อนลง */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* ลดความเข้มของเงา */
+}
+
+.buttons, .footer-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+a {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, and basis */
+    text-align: center;
+}
+
+a:hover {
+    transform: scale(1.05);
+}
+
+.register-btn {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ลดความเข้มของเงา */
+}
+
+.line-btn {
+    background-color: #00c300;
+    color: #fff;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ลดความเข้มของเงา */
+}
+
+hr {
+    border: 1px solid #333;
+    margin: 30px 0;
+}
+
+.promotion {
+    margin: 40px 0;
+}
+
+.promotion h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffd700; /* ใช้สีที่ดูอ่อนลง */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* ลดความเข้มของเงา */
+}
+
+.promotion p {
+    font-size: 20px;
+    color: #ccc;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* ลดความเข้มของเงา */
+}
+
+.promo-img {
+    width: 100%;
+    max-width: 200px; /* ให้ภาพไม่ใหญ่เกินไป */
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.game {
+    background-color: #1a1a1a;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(43% - 40px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); /* ลดความเข้มของเงา */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.game:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* ลดความเข้มของเงา */
+}
+
+@media (max-width: 768px) {
+    .game {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .game {
+        width: 100%;
+    }
+
+    .buttons, .footer-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a {
+        flex: 1 1 auto; /* ปรับสำหรับหน้าจอขนาดเล็ก */
+        width: 90%; /* ให้ลิงก์เต็มหน้าจอในหน้าจอขนาดเล็ก */
+        max-width: 200px; /* ป้องกันไม่ให้กว้างเกินไปในหน้าจอขนาดใหญ่ */
+    }
+}
+
+.image-container {
+    width: 100%; /* ปรับขนาดตามต้องการ */
+    height: 100%; /* ปรับขนาดตามต้องการ */
+    overflow: hidden; /* ป้องกันไม่ให้ภาพที่เบลอหลุดออกมานอกขอบ */
+    position: relative;
+}
+
+.contact {
+    width: 100px;
+    margin-top: 100px;
+    /* margin-bottom: 10px; */
+    display: block;
+    text-align: start;
+    color: #39334e;
+    text-decoration: none;
+}
+.contact:hover {
+    color: #404256;
+}
+
+@media (max-width: 1024px) {
+    /* Hide on screens 1024px and below (tablets and phones) */
+    .contact {
+        display: none;
+    }
+}
+
+.blur-image {
+    height: 100%;
+    object-fit: cover; /* ปรับภาพให้เต็มพื้นที่โดยไม่เสียอัตราส่วน */
+    /* filter: blur(8px); */ /* ปรับค่าความเบลอได้ตามต้องการ เช่น 5px, 10px เป็นต้น */
+}
